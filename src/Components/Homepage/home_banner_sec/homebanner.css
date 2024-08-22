@@ -1,0 +1,102 @@
+.banner_main{
+    background-image: url('/src//assets//Banner_image.png');
+    /* C:\Users\RTX\Downloads\Document from Abrahim Wani\src\assets\Banner_image.png */
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 565px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:  #fff;
+    text-align: center;
+    padding: 0px 30px;
+}
+.banner_content{
+    max-width: 948px;
+    width: 100%;
+    margin: 0px auto;
+}
+.banner_content h1{
+font-size: 42px;
+font-family: poppins;
+color: #fff;
+line-height: 63px;
+font-weight: 700;
+margin: 0px;
+}
+.banner_content p{
+    font-size: 17px;
+    line-height: 25.5px;
+    margin: 20px 0px 30px;
+    font-family: poppins;
+    font-weight: 500;
+}
+.iput_search {
+    position: relative;
+    width: 100%;
+    max-width: 549px;
+    margin: 0 auto;
+    padding: 0px;
+    display: inline-flex;
+}
+.banner_content input {
+    width: 100%;
+    min-height: 72px;
+    border-radius: 50px;
+    border: 0px;
+    padding: 0px 30px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #111;
+    font-family: 'Poppins';
+}
+.banner_content input::placeholder{
+    color: #9D9C9C;
+}
+.banner_content input:focus-visible{
+    outline: 0px;
+}
+.iput_search  span.search_icon {
+    position: absolute;
+    right: -46px;
+    z-index: 1;
+    top: 50%;
+    transform: translatey(-50%);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    background: linear-gradient(146.31deg, #F4C05C 13.27%, #D29A2E 90.77%);
+    cursor: pointer;
+}
+
+
+/* Responsive */
+@media (max-width:767px){
+    .banner_content h1 {
+        color: #fff;
+        margin: 0px;
+        font-family: Poppins;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 36px;
+        text-align: center;
+    }
+    .banner_content p {
+        margin: 20px 0px 20px;
+        font-family: Poppins;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+        text-align: center;
+    }
+    .iput_search  span.search_icon {
+        right: 11px;
+    }
+    .iput_search {
+        max-width: 100%;
+        display: inline-flex;
+    }
+}

@@ -1,0 +1,110 @@
+/* Creator_sec */
+.Creator_Div{
+    padding: 0px 15px
+}
+.Creator_user_sec{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    /* width: 100%; */
+    margin: 0px auto;
+    margin-top: -80px;
+}
+.Creator_sec{
+    box-shadow: 0px 4px 24px 0px #0000001A;
+    border: 1px solid var(--Color-Black-10, #DFDFDF);
+    border-radius: 10px;
+    min-height: 100px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: #fff;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    align-items: center;
+    text-align: left;
+}
+.Creator_sec h4{
+    font-family: poppins;
+    font-size: 20px;
+    line-height: 30px;
+    color: #181717;
+    font-weight: 600;
+    margin: 0px;
+}
+.Creator_sec>img:last-child {
+    cursor: pointer;
+}
+.Creator_sec p{
+    font-family: poppins;
+    font-size: 14px;
+    line-height: 21px;
+    color: #707070;
+    font-weight: 400;
+    margin: 10px 0px;
+    min-width: 260px;
+    width: 100%;
+    max-width: 230px;  
+}
+
+/* responsive */
+@media (max-width:991px){
+    .Creator_sec {
+        max-width: 350px;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
+@media (min-width:767px){
+    img.Desk_arrow {
+        display: block;
+    }
+    img.Mobi_arrow {
+        display: none;
+    }
+}
+@media (max-width:767px){
+    .Creator_sec p {
+        display: none;
+    }
+    .Creator_sec {
+        max-width: 200px;
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+    .Creator_sec h4 {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 24px;
+        text-align: left;
+        /* word-wrap: break-word; */
+        display: flex;
+        align-items: flex-end;
+    }
+    .Creator_sec img.creator_user {
+        width: 43px;
+        height: 42px;
+    }
+    img.Desk_arrow {
+        display: none;
+    }
+    img.Mobi_arrow {
+        width: 10px;
+        height: 10px;
+        margin-left: 10px;
+        position: relative;
+        top: -7px;
+    }
+    section.banner_main .iput_search {
+        margin-bottom: 40px;
+    }
+    .banner_main {
+        min-height: 520px;
+        padding: 0px 30px;
+    }
+    img.Mobi_arrow {
+        display: block;
+    }
+}

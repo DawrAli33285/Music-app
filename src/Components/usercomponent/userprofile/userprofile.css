@@ -1,0 +1,45 @@
+
+form.profile_setting h1.text-start {
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 28.13px;
+    text-align: left;
+    margin: 10px 0px 0px;
+}
+form.profile_setting {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 12px 0px #00000026;
+    padding: 20px;
+}
+form.profile_setting button {
+    max-width: 232px;
+    margin-left: 0px;
+}
+.profile_Div img {
+    object-fit: contain;
+}
+.profile_Div {
+    display: flex;
+    text-align: left;
+    gap: 20px;
+}
+.profile_Div h5 {
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 23.44px;
+    text-align: left;
+    color: #181717;
+}
+.profile_Div p {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.41px;
+    color: #707070;
+}

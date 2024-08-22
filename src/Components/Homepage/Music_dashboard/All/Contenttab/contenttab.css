@@ -1,0 +1,11 @@
+.filter_icon {
+    border: 1px solid;
+    width: 24px;
+    height: 24px;
+    border-radius: 30px;
+}
+
+.filter_icon img {
+    position: relative;
+    top: -3px;
+}

@@ -1,0 +1,223 @@
+.statements {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .filters select {
+    margin-left: 10px;
+  }
+  .chart-container canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+  .chart-container {
+    position: relative;
+    min-height: 180px;
+    width: 100%;
+    max-width: 100%;
+    padding: 0px 30px;
+  }
+  
+  .nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0px;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    left: 5px;
+  }
+  .header h2 {
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    margin: 0px;
+}
+  .circle-button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    background-color: #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .circle-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .months-display {
+    margin: 0 20px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .chardt_rightContent .nav-buttons button {
+  background: transparent;
+  border: 1px solid #111;
+  color: #111;
+  width: 20px !important;
+  min-height: 20px !important;
+  height: 20px;
+  border-radius: 30px;
+  font-size: 13px;
+  margin: unset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.chardt_rightContent {
+  display: flex;
+  gap: 50px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.chardt_rightContent .music_content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.chardt_rightContent .music_content>div {
+  box-shadow: 0px 0px 2px 0px #00000040;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: left;
+  width: 100%;
+  max-width: 150px;
+  min-width: 150px;
+}
+.chardt_rightContent .music_content h6 {
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  color: #181717;
+}
+.chardt_rightContent .music_content b {
+  font-family: Poppins;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 39px;
+  text-align: left;  
+}
+.music_content>div:nth-child(2) b{
+  color: #769EFF;
+}
+.music_content>div:nth-child(3) b{
+  color: #FFB894;
+}
+.header .filters {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+}
+.header .filters select {
+  width: 100%;
+  max-width: 110px;
+  padding: 5px;
+  border-radius: 5px;
+  min-height: 32px;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  text-align: left;
+}
+.header .filters div {
+  display: flex;
+  gap: 0px;
+  width: 100%;
+  margin: 0px;
+}
+.header .filters a {
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  text-align: left;
+  color: #111;
+}
+
+@media (max-width:1200px){
+  .chardt_rightContent .music_content {
+    flex-wrap: wrap;
+    flex-direction: unset;
+}
+}
+@media (max-width:767px){
+
+.chardt_rightContent .music_content h6 {
+  font-size: 8px;
+  font-weight: 500;
+  line-height: 11px;
+  margin-bottom: 0px;
+}
+.chardt_rightContent .music_content b {
+  font-size: 14px;
+  line-height: 21px;
+}
+.nav-buttons {
+  bottom: 3px;
+}
+.chardt_rightContent .music_content>div {
+  border-radius: 4px;
+  padding: 5px;
+  width: 100%;
+  max-width: 82px;
+  min-width: 82px;
+}
+.chardt_rightContent {
+  gap: 10px;
+  justify-content: space-between;
+}
+.chart-container {
+  min-height: unset;
+  width: 100%;
+  max-width: 100%;
+}
+.header h2 {
+  font-size: 14px;
+  line-height: 18.68px;
+}
+.header .filters select {
+  width: 100%;
+  max-width: 80px;
+}
+.chardt_rightContent .music_content {
+  flex-direction: column;
+}
+.chardt_rightContent .nav-buttons button {
+  width: 14px !important;
+  min-height: 14px !important;
+  height: 14px !important;
+  padding: 0px !important;
+  min-width: 14px !important;
+}
+
+}
+@media (max-width:479px){
+  .chart-container {
+    padding: 0px 10px;
+}
+.nav-buttons {
+  width: calc(100% + 5%);
+  bottom: 0px;
+  left: -10px;
+}
+}

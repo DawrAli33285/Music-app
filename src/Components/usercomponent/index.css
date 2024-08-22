@@ -1,0 +1,387 @@
+/* App.css */
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .header_Sec {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+  }
+  
+  .header_main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .Web_logo img {
+    height: 40px;
+    object-fit: contain;
+  }
+  
+  .Header_btns {
+    display: flex;
+    align-items: center;
+  }
+  
+  .Header_btns button {
+    margin-left: 10px;
+  }
+  
+  .profile-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  .profile_name {
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+  .profile-container .profile_name span.view_profile {
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: left;
+    text-decoration: underline;
+}
+  .profile-container .profile_name .profile_name {
+    font-family: Poppins;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 25.5px;
+    text-align: left;
+    
+}
+
+  .user-icon {
+    width: 52px;
+    height: 52px;
+    margin-right: 10px;
+    border: 1px;
+  }
+  
+  .side-menu {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 584px;
+    height: 100%;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    z-index: 1000;
+  }
+  .side-menu-header .close-button svg {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+  .side-menu-header {
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+  }
+  
+  .side-menu-header h2 {
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36px;
+    text-align: left;
+    color: #181717;
+  }
+  
+  .close-button {
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 0px;
+    position: absolute;
+    right: 0;
+    top: -5px;
+  }
+
+  .side-menu-content ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 60px;
+  }
+  
+  .side-menu-content ul li {
+    padding: 10px 0;
+    cursor: pointer;
+  }
+  .side-menu-content ul li a {
+    display: flex;
+    justify-content: space-between;
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    color: #444343;
+    text-decoration: none;
+}
+
+.side-menu-content ul li a svg {
+    fill: #707070;
+}
+  .logout-button {
+    margin-top: 20px;
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  /* .tab-content {
+    padding: 20px;
+  } */
+  .tabs {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f1f1f1;
+    padding: 10px;
+}
+
+.tabs button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.tabs button:hover {
+    background-color: #45a049;
+}
+
+/* .tab-content {
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+}
+
+/* usercoponent */
+.user-component .tab-content .tabs {
+  box-shadow: 0px 4px 4px 0px #0000000D;
+  background: #fff;
+  min-height: 75px;
+  justify-content: center;
+  gap: 50px;
+  padding: 0px;
+  overflow-x: auto;
+}
+.user-component .App, .user-component .tab-content .tabs+div {
+  background: #fafafa;
+  padding-top: 30px;
+}
+.user-component .purchases-list form.profile_setting {
+  box-shadow: none;
+  margin: 0px;
+}
+.user-component .tab-content {
+  padding: 0px;
+  margin: 0px;
+}
+.user-component .purchases-list {
+  border-radius: 0px;
+  box-shadow: none;
+  background: #fff;
+  max-width: 80%;
+  margin: 0px auto;
+  border: 1px solid var(--Color-Black-10, #DFDFDF);
+  padding: 0px;
+}
+.user-component .tab-content .tabs button {
+  background: transparent;
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+  color: #707070;
+  padding: 0px;
+  transition: .5s all;
+  position: relative;
+  white-space: pre;
+}
+.user-component .tab-content .tabs>button:hover, .user-component .tab-content .tabs>button.activeitem{
+  background: linear-gradient(180deg, #F4C05C 0%, #D8A136 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  font-weight: 600;
+}
+
+.user-component .tab-content .tabs button::after {
+  width: 0;
+  height: 3px;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(180deg, #F4C05C 0%, #D8A136 100%);
+  z-index: 1;
+  border: 0px;
+  left: 0;
+  transition: width 0.3s ease; /* Adjust the duration and timing function as needed */
+}
+
+.user-component .tab-content .tabs button:hover::after {
+  width: 100%;
+}
+.user-component .tab-content .tabs>button.activeitem::after {
+  width: 100%;
+}
+
+.user-component .no-purchases {
+  width: 100%;
+  max-width: 80%;
+  margin: 0px auto;
+  padding: 0px;
+}
+
+.user-component .no-purchases-content h3 {
+  font-family: Poppins;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 48px;
+}
+
+.user-component .no-purchases-content p {
+  font-family: Poppins;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 36px;
+  text-align: center;
+}
+
+button.explore-button {
+  font-size: 24px;
+  color: #181717;
+  line-height: 28.13px;
+  font-weight: 500;
+  background: linear-gradient(180deg, #F4C05C 0%, #D8A136 100%);
+  width: 100%;
+  max-width: 269px;
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #00000000;
+  border-radius: 10px;
+  margin: 30px auto 0px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 23.44px;
+  text-align: left;
+}
+
+
+@media (max-width:767px){
+  .user-icon, .Header_btns a img {
+    width: 32px;
+    height: 32px;
+    margin: 0px;
+}
+.side-menu-content {
+  height: 100%;
+  overflow-y: auto;
+}
+  .side-menu {
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    top: 30%;
+    border-radius: 16px 16px 0px 0px;
+}
+.side-menu-content h3 {
+  font-size: 24px;
+  line-height: 30px;
+  margin-top: 20px;
+}
+.side-menu-content ul li a {
+  font-size: 20px;
+  line-height: 30px;
+}
+.user-component .tab-content .tabs button {
+  font-size: 16px;
+  line-height: 24px;
+
+}
+.user-component .tab-content .tabs {
+  min-height: 48px;
+  overflow-x: auto;
+  justify-content: center;
+  padding: 0 15px;
+  gap: 20px;
+  box-shadow: 0px 3.74px 3.74px 0px #0000000D;
+  margin-bottom: 3px;
+}
+.user-component .no-purchases-content h3 {
+  font-size: 24px;
+  line-height: 36px;
+}
+.user-component .no-purchases-content p {
+  font-size: 16px;
+  line-height: 24px;
+}
+button.explore-button {
+  max-width: 235px;
+  min-height: 42px;
+  font-size: 16px;
+  line-height: 16.41px;
+  border-radius: 8px;
+  font-weight: 500;
+}
+.no-purchases-content {
+  margin-top: 20px;
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  right: 15px;
+  transform: translateY(-50%);
+}
+.user-component .App, .user-component .tab-content .tabs+div {
+  background: #fff;
+  padding-top: 0px;
+}
+.user-component .no-purchases {
+  max-width: 100%;
+  padding: 20px 15px 0px;
+  border: 0px;
+}
+.user-component .purchases-list {
+  max-width: 100%;
+  padding: 20px 15px 70px;
+  border: 0px;
+}
+.user-component .purchases-list form.profile_setting {
+  padding: 0px;
+}
+}
+@media (max-width:479px){
+  .Web_logo img {
+    height: fit-content;
+    object-fit: contain;
+    width: 60px;
+}
+.user-component .no-purchases {
+  max-width: 100%;
+  padding: 0px 15px;
+  border: 0px;
+}
+.user-component .App, .user-component .tab-content .tabs+div {
+  background: white;
+  /* padding-top: 20px; */
+}
+}

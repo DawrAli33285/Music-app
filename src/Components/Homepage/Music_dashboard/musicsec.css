@@ -1,0 +1,189 @@
+.Music_sec .Container {
+    /* width: 100%; */
+    max-width: 1220px;
+    margin: 80px auto;
+    padding: 50px;
+    background-color: #181717;
+    border-radius: 40px;
+}
+
+.tabs_section ul.react-tabs__tab-list li.react-tabs__tab--selected {
+    border-bottom: 3px solid orange;
+}
+section.Creator_Div+section.Container.tabs_section ul.react-tabs__tab-list li.react-tabs__tab--selected {
+    border-color: #000;
+}
+section.Music_sec {
+    padding: 0px 30px;
+}
+.music_content h2{
+    font-size: 38px;
+    line-height: 44.8px;
+    color: #FFFFFF;
+    font-family: Roboto;
+    font-weight: 600;
+    margin: 0px;
+    text-align: center;
+}
+.music_tab .react-tabs {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0px 0px;
+    align-items: flex-start;
+}
+.music_tab .react-tabs ul.react-tabs__tab-list {
+    color: #fff;
+    border: 0px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    margin: 0px;
+    padding: 0px;
+}
+.music_tab .react-tabs ul.react-tabs__tab-list>li:first-child {
+    width: 100%;
+    display: flex;
+    border: 0px;
+    min-width: 82%;
+    max-width: 83%;
+    background: #3E3E3E33;
+    padding: 40px 30px;
+    border-radius: 0px 0px 20px 20px;
+    border-top: 4px solid #FFFFFF4D;
+    position: relative;
+    justify-content: flex-start;
+    margin: 0px;
+}
+.music_tab .react-tabs ul.react-tabs__tab-list li {
+    width: 100%;
+    display: flex;
+    border: 0px;
+    min-width: 82%;
+    max-width: 83%;
+    padding: 0px 30px;
+    justify-content: flex-start;
+    margin: 0px;
+    cursor: pointer;
+}
+.music_tab .react-tabs ul.react-tabs__tab-list>li:first-child::after {
+    width: 100%;
+    max-width: 130px;
+    position: absolute;
+    content: '';
+    height: 4px;
+    top: -5px;
+    left: 0;
+    background: linear-gradient(180deg, #F4C05C 0%, #D8A136 100%);
+}
+
+.music_tab .react-tabs ul.react-tabs__tab-list li .music_lisContent {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.music_tab .react-tabs ul.react-tabs__tab-list>li:first-child .music_lisContent{
+    align-items: flex-start;
+    display: flex;
+    gap: 10px;
+}
+.music_tab .react-tabs ul.react-tabs__tab-list li .music_lisContent h5 {
+    font-size: 20px;
+    line-height: 23.44px;
+    font-family: 'Roboto';
+    font-weight: 500;
+    margin: 0px;
+}
+.music_tab .react-tabs ul.react-tabs__tab-list li .music_lisContent p {
+    font-family: 'Roboto';
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    padding-bottom: 40px;
+}
+.music_tab .react-tabs ul.react-tabs__tab-list li .music_lisContent a {
+    background: linear-gradient(180deg, #F4C05C 0%, #D8A136 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 16px;
+    font-family: 'Roboto';
+    font-weight: 500;
+    line-height: 18.75px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+}
+
+/* responisve */
+
+@media (min-width:767px){
+    .mobile_Img {
+        display: none;
+    }
+}
+@media (max-width:767px){
+    .music_content h2 {
+        color: #FFFFFF;
+        margin: 0px;
+        font-family: Roboto;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 28.13px;
+        text-align: center;
+    }
+    .music_tab .react-tabs {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .Music_sec .Container {
+        padding: 20px;
+        border-radius: 12px;
+    }
+    .music_tab .react-tabs ul.react-tabs__tab-list li .music_lisContent h5 {
+        margin: 0px;
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 18.75px;
+        text-align: left;
+    }
+    .mobile_Img {
+        display: block;
+    }
+    .music_lisContent .mobile_Img {
+        margin-top: 30px;
+    }
+    
+    .music_lisContent .mobile_Img img {
+        width: 100%;
+    }
+    .music_tab .react-tabs ul.react-tabs__tab-list>li:first-child {
+        padding: 20px;
+        min-width: 90%;
+    max-width: 92%;
+    }
+    .music_tab .react-tabs ul.react-tabs__tab-list li{
+        padding: 0px 20px;
+    }
+    .music_tabContent {
+        display: none;
+    }
+    .Music_sec .Container {
+        margin: 50px auto;
+    }
+}
+
+@media (max-width:479px){
+    .Music_videoUpload {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+/* tablesection? */
+

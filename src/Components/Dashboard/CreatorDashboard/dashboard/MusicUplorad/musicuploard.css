@@ -1,0 +1,772 @@
+.stepForm_part .active {
+    background-color: black;
+  }
+  .back_screens, .back_screens h1 a {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+.back_screens h1 a {
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36px;
+    text-align: left;
+    cursor: pointer;
+    color: #111;
+    text-decoration: none;
+}
+
+  .custom-form {
+    background-color: #f8f9fa; /* Light grey background */
+    padding: 20px; /* Padding around the form */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow */
+  }
+
+  .btn_wapper {
+    box-shadow: 0px 4px 14px 0px #00000040;
+    padding: 15px 20px;
+    margin-top: 20px;
+}
+.progress-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #e0e0df;
+    border-radius: 25px;
+    margin: 20px 0;
+    padding: 2px;
+  }
+  
+  .progress-step {
+    flex: 1;
+    height: 10px;
+    background-color: #e0e0df;
+    margin: 0 5px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .progress-step.active {
+    background-color: #76c7c0;
+  }
+  
+
+  textarea {
+    pointer-events: auto;
+    z-index: 1;
+  }
+
+
+  .statement_form{
+    display: flex;
+  }
+
+
+/* Left_step */
+.custom-form h2 {
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 23.44px;
+  text-align: left;
+  border-bottom: 1px solid #E4E4E4;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+.Dashboard_rightContent .col-md-3 p {
+  color: #9D9C9C;
+}
+.Dashboard_rightContent .stepForm_part p.active, .Dashboard_rightContent .stepForm_part p {
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 16.41px;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px;
+  clip-path: polygon(100% 51%, 93% 100%, 0 100%, 0 0, 93% 0);
+  border: 1px solid #C9C9C9;
+  position: relative;
+  background: #ffffff;
+}
+.form-check label.form-check-label {
+  padding: 0px;
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21.09px;
+  text-align: left;
+}
+
+.custom-form form .stepForm_part {
+  gap: 10px;
+}
+.Dashboard_rightContent .stepForm_part {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 250px;
+}
+
+.Dashboard_rightContent .stepForm_part p::after {
+  content: '';
+  width: 80px;
+  height: 1px;
+  position: absolute;
+  background: #C9C9C9;
+  top: 0px;
+  right: -23px;
+  transform: rotate(53deg);
+}
+.Dashboard_rightContent .custom-form .d-flex {
+  gap: 14px;
+}
+.Dashboard_rightContent .custom-form .d-flex label {
+  padding: 0px;
+}
+.Dashboard_rightContent .stepForm_part p::before {
+  content: '';
+  width: 80px;
+  height: 1px;
+  position: absolute;
+  background: #C9C9C9;
+  bottom: 0px;
+  right: -24px;
+  transform: rotate(306deg);
+}
+
+.Dashboard_rightContent .stepForm_part span {
+  position: absolute;
+  background: white;
+  content: '';
+  width: 49px;
+  height: 49px;
+  border-radius: 50px;
+  left: -20px;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #9D9C9C;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 16.41px;
+  text-align: left;
+  color: #9D9C9C;
+}
+
+.step_divForm {
+  position: relative;
+}
+
+.Dashboard_rightContent .stepForm_part p.active {
+  background: #181717;
+  color: #ffffff;
+}
+.Dashboard_rightContent .stepForm_part p.active+ span {
+  background: linear-gradient(180deg, #F4C05C 0%, #D8A136 100%);
+  border: 0px;
+  color: #181717;
+}
+.step_part {
+  display: flex;
+  gap: 20px;
+  padding: 20px 20px 40px;
+}
+.step_divForm.stepCompleted p, .step_divForm.stepCompleted p::before, .step_divForm.stepCompleted p::after {
+  background: #e5ede7;
+  color: #56AB68;
+  border-color: #e5ede7;
+}
+
+.step_divForm.stepCompleted span {
+  border: 1px solid #56AB68;
+  background: #e5ede7;
+  color: #56AB68;
+}
+/* right_side */
+.Dashboard_rightContent .stepForm_part p.active+ span {
+  background: linear-gradient(180deg, #F4C05C 0%, #D8A136 100%);
+  border: 0px;
+  color: #181717;
+}
+.Dashboard_rightContent .note_sec {
+  background: linear-gradient(96.28deg, #D8E3FF 0%, #FFECE3 98.13%);
+  height: fit-content;
+  border: 2px solid var(--white, #FFFFFF);
+  border-radius: 10px;
+  color: #181717;
+  text-align: left;
+  padding: 20px 20px 5px;
+}
+
+.Dashboard_rightContent .note_sec p, .Predefined_price p {
+  color: #181717;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+}
+.Predefined_price {
+  border-radius: 10px;
+  color: #181717;
+  text-align: left;
+  padding: 20px ;
+  border: 1px solid var(--Color-Black-10, #DFDFDF);
+  margin-top: 15px;
+  
+}
+.Predefined_price .customize_btns {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.Dashboard_rightContent button.btn-light {
+  background: #EFEFEF ;
+  color: #181717 ;
+  border-color: #EFEFEF !important;
+}
+.Predefined_price .customize_btns button {
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.41px;
+  max-width: 130px;
+  padding: 10px;
+  margin: unset;
+}
+.MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-2\.5.css-s7s3c1-MuiGrid-root {
+  background: #2f3032;
+}
+.Dashboard_rightContent .note_sec h1, .Predefined_price h1 {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+/* Middle */
+.Custom_formwrapper {
+  max-width: 620px;
+  width: 100%;
+}
+  .Dashboard_rightContent .custom-form {
+    background-color: #ffffff;
+    box-shadow: 0px 4px 12px 0px #00000026;
+    border-radius: 10px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    padding: 0px;
+    max-width: 620px;
+    width: 100%;
+  }
+  .musicSubmitbtn {
+    box-shadow: 0px 4px 14px 0px #00000040;
+    padding: 20px;
+}
+.musicSubmitbtn button.musicSubmitbutton {
+  width: 100%;
+  max-width: 366px;
+}
+  .custom-form>div:first-child {
+    padding: 20px;
+}
+ .Dashboard_rightContent .custom-form label {
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
+  padding: 10px 0px 0px;
+}
+.Dashboard_rightContent input.form-control, .Dashboard_rightContent select.form-control {
+  border: 1px solid #000000 !important;
+  min-height: 54px !important;
+  font-family: Roboto !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  line-height: 16.41px !important;
+  text-align: left !important;
+  border-radius: 8px !important;
+}
+.Dashboard_rightContent textarea.form-control{
+  border: 1px solid #000000 !important;
+  font-family: Roboto !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  line-height: 16.41px !important;
+  text-align: left !important;
+  border-radius: 8px !important;
+  padding: 12px;
+  height: 112px;
+}
+.Dashboard_rightContent form>div:nth-child(2) textarea.form-control {
+  min-height: 416px;
+}
+.Dashboard_rightContent .form-control:focus,  .Dashboard_rightContent .form-select:focus,   .Dashboard_rightContent button.btn:focus, .form-check-input:focus {
+    box-shadow: none !important;
+    border: 0px ;
+}
+.custom-form h2 {
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 23.44px;
+  text-align: left;
+  border-bottom: 1px solid #E4E4E4;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+.Dashboard_rightContent .form-check-input:checked {
+  background-color: #000000;
+  border-color: #000000;
+}
+.musicSubmitbtn button.musicSubmitbutton {
+  margin: 0 auto;
+}
+.Dashboard_rightContent .btn_wapper button {
+  flex: 1;
+}
+.Dashboard_rightContent button {
+  background: #181717;
+  border-color: #181717;
+  min-height: 50px;
+  width: 100%;
+  max-width: 100%;
+  margin-right: 0 auto;
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21.09px;
+  border-radius: 8px;
+  transition: .5s all;
+  border: 1px solid !important;
+  color: white;
+}
+.Dashboard_rightContent button:hover {
+    background: transparent;
+    color: #181717;
+}
+.Custom_formwrapper .top_prices {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.Custom_formwrapper  .top_prices .customize_btns {
+  width: 100%;
+  margin-right: 0px;
+  max-width: 300px;
+}
+
+.addopstion button:hover{
+  display: none !important;
+
+}
+
+.Dashboard_rightContent .step_formwrapper {
+    text-align: left;
+}
+.custom-form>div:last-child {
+  display: flex;
+  gap: 10px;
+}
+
+/* progress */
+
+.custom-form .progress-step.active {
+  background: #524E4E;
+  width: 120px;
+  height: 4px !important;
+  border-radius: 3px;
+}
+
+.custom-form .progress-container {
+  background: #E4E4E4;
+  padding: 0px;
+  height: 1px;
+  width: 100%;
+  margin: -20px 0px 20px;
+}
+.custom-form .progress-container .progress-step {
+  height: 1px;
+}
+.Dashboard_rightContent .custom-form .Progress_form h4 {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21.09px;
+  text-align: left;
+}
+
+.custom-form .progress-step.active {
+  background: #524E4E;
+  width: 120px;
+  height: 4px !important;
+  border-radius: 3px;
+  margin: 0px;
+}
+.btn_wapper {
+  display: flex;
+  gap: 10px;
+  justify-content: end;
+}
+.Dashboard_rightContent button.bg_transparent {
+  background: transparent;
+  color: #111;
+  margin-bottom: 10px;
+}
+.custom-form .progress-container {
+    background: #E4E4E4;
+    padding: 0px;
+    height: 1px;
+    width: 100%;
+    margin: -20px 0px 20px;
+}
+.custom-form .progress-container .progress-step {
+    height: 1px;
+}
+form.Progress_form {
+  margin-top: 30px;
+
+}
+form.Progress_form button.add_option.bg_transparent {
+  width: 100%;
+  max-width: 100%;
+}
+.Dashboard_rightContent .custom-form form.Progress_form>div:nth-child(1){
+  padding: 0px 20px;
+}
+.btn_wapper {
+  box-shadow: 0px 4px 14px 0px #00000040;
+  padding: 20px;
+}
+.Dashboard_rightContent .custom-form>div:nth-child(2)>div {
+  padding: 0px 20px;
+}
+.Dashboard_rightContent .custom-form .Progress_form h4 {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21.09px;
+  text-align: left;
+  padding-bottom: 10px;
+}
+
+form.Progress_form .check_progress {
+    border-radius: 8px;
+    border: 1px solid #9D9C9C;
+    min-height: 54px;
+    padding: 8px 15px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+form.Progress_form .check_progress label {
+    padding: 0px;
+    position: relative;
+}
+
+form.Progress_form .check_progress input[type="radio"] {
+  accent-color: black;
+  width: 16px;
+  height: 16px;
+}
+.Dashboard_rightContent .custom-form>div:nth-child(2){
+  padding:20px;
+}
+.Dashboard_rightContent .Content_infowrapper .Progress_form {
+  padding: 20px 0px 0px !important;
+}
+.Dashboard_rightContent .Content_infowrapper .Progress_form {
+  padding: 0px 0px 0px !important;
+  margin-top: 0px;
+}
+.Dashboard_rightContent .Content_infowrapper button.bg_transparent {
+  width: 100% !IMPORTANT;
+  max-width: 100%;
+}
+.Dashboard_rightContent .Content_infowrapper.custom-form>div:nth-child(2) {
+  padding: 20px 0px 0px;
+}
+.Custom_formwrapper .Predefined_price {
+  position: relative;
+  box-shadow: 0px 4px 12px 0px #00000026;
+  margin-bottom: 20px;
+  margin-top: 0px;
+}
+.Custom_formwrapper span.close_icon {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+
+
+
+@media (max-width:1200px){
+  .Dashboard_rightContent .stepForm_part p.active, .Dashboard_rightContent .stepForm_part p {
+    min-height: 34px;
+}
+.Dashboard_rightContent .stepForm_part span {
+  width: 34px;
+  height: 34px;
+}
+.Dashboard_rightContent .stepForm_part p::before {
+  right: -31px;
+}
+.Dashboard_rightContent .stepForm_part p::after {
+  right: -31px;
+}
+.Dashboard_rightContent .note_sec {
+  padding: 20px 13px 5px;
+}
+.Dashboard_rightContent .stepForm_part {
+  max-width: 100%;
+}
+.step_part {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 3fr;
+  padding: 20px 20px 100px;
+}
+.note_SecWrapper.desktop_only {
+  display: none;
+}
+.Dashboard_rightContent form {
+  padding: 0px;
+}
+.Dashboard_rightContent .custom-form {
+  gap: 0px;
+}
+}
+@media (max-width:991px){
+  .step_part {
+    grid-template-columns: 1fr 2fr;
+  }
+
+}
+@media (min-width:1200px){
+  .note_SecWrapper.mobile_only {
+     display: none;
+}
+}
+
+@media (max-width:767px){
+  .step_part {
+    grid-template-columns: 1fr;
+    padding: 20px 0px 100px 0px;
+}
+.Dashboard_rightContent .custom-form {
+  max-width: 100%;
+  width: 100%;
+}
+.Custom_formwrapper {
+  max-width: 100%;
+  width: 100%;
+}
+.Dashboard_rightContent .custom-form>div:nth-child(2) {
+  padding: 0px;
+}
+.musicSubmitbtn {
+  box-shadow: none;
+  padding: 20px 0px 0px;
+}
+.musicSubmitbtn button.musicSubmitbutton {
+  width: 100%;
+  max-width: 100%;
+}
+.custom-form h2 {
+  border-bottom: 0px;
+  padding-bottom: 0px;
+}
+.custom-form .progress-container {
+  display: none;
+}
+.Custom_formwrapper .Predefined_price.top_prices {
+  display: none;
+}
+.Dashboard_rightContent .custom-form .musicSubmitbtn, .Dashboard_rightContent .custom-form .btn_wapper {
+  position: fixed;
+  bottom: 0;
+  z-index: 99;
+  left: 0px;
+  right: 0px;
+  background: #fff;
+  box-shadow: 0px 0px 4px 0px #00000040;
+  padding: 15px !important;
+}
+.back_screens h1 {
+  margin: 0px;
+}
+.Dashboard_rightContent .custom-form {
+  padding: 0px 15px 0px 24px!important;
+  background: transparent;
+  box-shadow: none;
+}
+.custom-form.content_info.active.Content_infowrapper {
+  padding: 0px !important;
+}
+.custom-form>div:first-child {
+  padding: 0px;
+}
+.Dashboard_rightContent .stepForm_part p.active, .Dashboard_rightContent .stepForm_part p {
+  min-height: 36px;
+  clip-path: unset;
+  border-radius: 4px;
+  width: 100%;
+  min-width: fit-content;
+  padding: 0px 10px;
+  padding-left: 40px;
+  white-space: pre;
+}
+.Dashboard_rightContent form {
+  padding: 0px;
+}
+.Dashboard_rightContent .stepForm_part {
+  max-width: 100%;
+  overflow-x: auto;
+  flex-direction: unset;
+}
+.Dashboard_rightContent .stepForm_part p::before, .Dashboard_rightContent .stepForm_part p::after {
+display: none;
+}
+.Dashboard_rightContent .stepForm_part span {
+  width: 24px;
+  height: 24px;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  background: transparent;
+}
+.back_screens .blurb_img {
+  border: 1px solid #181717;
+  border-radius: 30px;
+  width: 20px;
+  height: 20px;
+  padding: 2px;
+  cursor: pointer;
+}
+.back_screens .blurb_img img {
+  width: 100%;
+  position: relative;
+  top: -5px;
+}
+.back_screens h1 a img {
+  width: 16px;
+  height: 16px;
+}
+  .back_screens, .back_screens h1 a {
+    padding: 0px 10px;
+    font-size: 16px;
+    line-height: 18.75px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Dashboard_rightContent .stepForm_part {
+  gap: 10px;
+  border-width: 2px 0px 2px 0px;
+  padding: 20px 24px;
+  border-style: solid;
+  border-color: #ddd;
+  margin-bottom: 10px;
+}
+.Dashboard_rightContent .stepForm_part p {
+  background: #F7F7F7;
+  border-color: #f7f7f7;
+}
+.note_SecWrapper.mobile_only {
+  position: fixed;
+  z-index: 999;
+  bottom: 0;
+  left: 0;
+  right: 0px;
+  padding: 0px !important;
+  background: #16161680;
+  top: 0;
+}
+.Dashboard_rightContent .note_sec, .Dashboard_rightContent .Predefined_price {
+  border: 0px;
+  border-radius: 16px 16px 0px 0px;
+  background: #fff;
+  position: fixed;
+  z-index: 999;
+  bottom: 0;
+  left: 0;
+  right: 0px;
+}
+.Dashboard_rightContent .note_sec h1, .Predefined_price h1 {
+  font-size: 14px;
+  line-height: 16px;
+}
+.Dashboard_rightContent .note_sec p, .Predefined_price p {
+  font-size: 16px;
+line-height: 24px;
+  text-align: center;
+  margin: 20px 0px;
+}
+.Dashboard_rightContent .custom-form .note_secwrap  img {
+  border-radius: 50px;
+  border: 1px solid;
+  padding: 5px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+form.Progress_form {
+  margin-top: 10px !important;
+}
+.Dashboard_rightContent .custom-form .note_secwrap p {
+  text-align: left;
+  font-size: 14px;
+  line-height: 22px;
+  margin: 0px 0px 15px;
+}
+.Custom_formwrapper span.close_icon {
+  position: absolute;
+  right: 0px;
+  top: -10px;
+  cursor: pointer;
+}
+.Dashboard_rightContent .custom-form .note_secwrap p {
+  text-align: left;
+}
+.Predefined_price .customize_btns {
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.Predefined_price .customize_btns button {
+  max-width: 100%;
+  flex: 1;
+}
+form.Progress_form .check_progress label {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+  text-align: left;
+  margin: 0px;
+}
+}

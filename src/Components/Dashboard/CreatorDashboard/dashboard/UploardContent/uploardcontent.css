@@ -1,0 +1,52 @@
+.active {
+    background-color: black;
+  }
+  
+
+  .custom-form {
+    background-color: #f8f9fa; /* Light grey background */
+    padding: 20px; /* Padding around the form */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow */
+  }
+
+
+
+.progress-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #e0e0df;
+    border-radius: 25px;
+    margin: 20px 0;
+    padding: 2px;
+  }
+  
+  .progress-step {
+    flex: 1;
+    height: 10px;
+    background-color: #e0e0df;
+    margin: 0 5px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .progress-step.active {
+    background-color: #76c7c0;
+  }
+  
+
+  textarea {
+    pointer-events: auto;
+    z-index: 1;
+  }
+
+
+  .statement_form{
+    display: flex;
+  }
+
+
+
+  
