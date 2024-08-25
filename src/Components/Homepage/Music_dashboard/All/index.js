@@ -8,6 +8,7 @@ const ViewAll = () => {
 const [music,setMusic]=useState([])
 const [originalMusic,setOriginalMusic]=useState([])
 const [filter,setFilter]=useState("")
+const [languageFilter,setLanguageFilter]=useState("")
 const [content,setContent]=useState([])
   useEffect(()=>{
 
@@ -58,7 +59,7 @@ const [content,setContent]=useState([])
             return{
               ...data,
               liked:false,
-              fav_id:matchfound?.id
+              fav_id:null
             }
           }
         })
@@ -78,7 +79,7 @@ const [content,setContent]=useState([])
             return{
               ...data,
               liked:false,
-              fav_id:matchfound?.id
+              fav_id:null
             }
           }
         })
@@ -118,7 +119,8 @@ const [content,setContent]=useState([])
         const response = await axios.get(`${BASE_URL}/api/music_details/`, {
             params: {
                 page: page,
-                moods: latestFilter, // Pass the selected filter value
+                moods: [latestFilter], // Pass the selected filter value
+                languages:[languageFilter],
                 page_size: pageSize,
             },
         });
@@ -127,7 +129,8 @@ const [content,setContent]=useState([])
             params: {
                 page: 1,
                 upload_type: 'Content',
-                moods: latestFilter, // Pass the selected filter value
+                moods: [latestFilter], // Pass the selected filter value
+              languages:[languageFilter],
                 page_size: pageSize,
             },
         });
@@ -168,8 +171,142 @@ const [content,setContent]=useState([])
         console.error('Error fetching music details:', error.message);
     }
 }
+const handleLanguageChange = async (language, filtering) => {
+  let latestFilter;
 
+  setLanguageFilter((prev) => {
+    if (prev === language.target.value) {
+      latestFilter = "";
+      return "";
+    } else {
+      latestFilter = language.target.value;
+      return language.target.value;
+    }
+  });
+};
 
+const handleLanguageFilter = async () => {
+ 
+  const BASE_URL = 'http://3.110.212.158:8000';
+  const page = 1;
+  const pageSize = 6;
+  let response;
+  let responseContent;
+
+  try {
+    if (languageFilter?.length === 0 && filter?.length > 0) {
+     
+      response = await axios.get(`${BASE_URL}/api/music_details/`, {
+        params: {
+          page: page,
+          moods: [filter],
+          page_size: pageSize,
+        },
+      });
+
+      responseContent = await axios.get(`${BASE_URL}/api/music_details/`, {
+        params: {
+          page: 1,
+          upload_type: 'Content',
+          moods: [filter],
+          page_size: pageSize,
+        },
+      });
+
+    } else if (languageFilter?.length === 0 && filter?.length === 0) {
+  
+      response = await axios.get(`${BASE_URL}/api/music_details/`, {
+        params: {
+          page: page,
+          page_size: pageSize,
+        },
+      });
+
+      responseContent = await axios.get(`${BASE_URL}/api/music_details/`, {
+        params: {
+          page: 1,
+          upload_type: 'Content',
+          page_size: pageSize,
+        },
+      });
+    } else if (languageFilter?.length > 0 && filter?.length === 0) {
+   
+      response = await axios.get(`${BASE_URL}/api/music_details/`, {
+        params: {
+          page: page,
+          page_size: pageSize,
+          languages: [languageFilter],
+        },
+      });
+
+      responseContent = await axios.get(`${BASE_URL}/api/music_details/`, {
+        params: {
+          page: 1,
+          upload_type: 'Content',
+          page_size: pageSize,
+          languages: [languageFilter],
+        },
+      });
+    } else {
+    
+      response = await axios.get(`${BASE_URL}/api/music_details/`, {
+        params: {
+          page: page,
+          page_size: pageSize,
+          moods: [filter],
+          languages: [languageFilter],
+        },
+      });
+
+      responseContent = await axios.get(`${BASE_URL}/api/music_details/`, {
+        params: {
+          page: 1,
+          upload_type: 'Content',
+          page_size: pageSize,
+          moods: [filter],
+          languages: [languageFilter],
+        },
+      });
+    }
+
+    const token = localStorage.getItem('authToken');
+    let liked = await axios.get(`${BASE_URL}/api/favorites/`, {
+      headers: {
+        Authorization: `Token ${token}`,
+      },
+    });
+
+    let allMusic = response.data.results.map((data, index) => {
+      let matchfound = liked.data.find(u => u?.music_detail === data?.id);
+      return {
+        ...data,
+        liked: !!matchfound,
+        fav_id: matchfound?.id,
+      };
+    });
+
+    let allContent = responseContent.data.results.map((data, index) => {
+      let matchfound = liked.data.find(u => u?.music_detail === data?.id);
+      return {
+        ...data,
+        liked: !!matchfound,
+        fav_id: matchfound?.id,
+      };
+    });
+    console.log("MUSIC TO MY EARS")
+console.log(content)
+    setMusic(allMusic);
+    
+    setContent(allContent);
+
+  } catch (error) {
+    console.error('Error fetching music details:', error.message);
+  }
+};
+
+useEffect(() => {
+  handleLanguageFilter();
+}, [languageFilter]);
 
   return (
     <div >
@@ -179,7 +316,7 @@ const [content,setContent]=useState([])
        
       </div> */}
       <div>
-        <TabsComponent content={content} setContent={setContent} filterMusic={filterMusic} filter={filter} setFilter={setFilter} music={music} originalMusic={originalMusic} setOriginalMusic={setOriginalMusic} setMusic={setMusic} />
+        <TabsComponent handleLanguageChange={handleLanguageChange} languageFilter={languageFilter} setLanguageFilter={setLanguageFilter} content={content} setContent={setContent} filterMusic={filterMusic} filter={filter} setFilter={setFilter} music={music} originalMusic={originalMusic} setOriginalMusic={setOriginalMusic} setMusic={setMusic} />
       </div>
     </div>
   );

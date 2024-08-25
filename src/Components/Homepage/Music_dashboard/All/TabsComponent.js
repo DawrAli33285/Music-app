@@ -14,7 +14,7 @@ import Filter from "./Filter";
 // import TabsComponent from './TabsComponent';
 
 
-const TabsComponent = ({content,setContent,filterMusic,music,setMusic,originalMusic,setOriginalMusic,filter,setFilter}) => {
+const TabsComponent = ({handleLanguageChange,languageFilter,setLanguageFilter,content,setContent,filterMusic,music,setMusic,originalMusic,setOriginalMusic,filter,setFilter}) => {
   const [tabIndex, setTabIndex] = useState(0);
   const [showVideoPlayer, setShowVideoPlayer] = useState(false);
   const [videoSrc, setVideoSrc] = useState("");
@@ -71,7 +71,7 @@ const [isContent,setIsContent]=useState(false)
           <div>
           <div className="main_pageWidth">
             <div className="d-md-block d-none">
-              <Filter filterMusic={filterMusic} filter={filter} setFilter={setFilter} music={music} originalMusic={originalMusic} setOriginalMusic={setOriginalMusic} setMusic={setMusic}/>
+              <Filter handleLanguageChange={handleLanguageChange} languageFilter={languageFilter} setLanguageFilter={setLanguageFilter} filterMusic={filterMusic} filter={filter} setFilter={setFilter} music={music} originalMusic={originalMusic} setOriginalMusic={setOriginalMusic} setMusic={setMusic}/>
             </div>
 
             <div >

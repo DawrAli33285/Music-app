@@ -31,7 +31,7 @@ console.log(formData)
     });
     return res.data;
   } catch (error) {
-    toast.error(error.response.data.error);
+    toast.error(error?.response?.data?.error);
 
     console.error(error.response.data.error);
     return error;
@@ -202,11 +202,12 @@ export const useGetMusicLinksByDetail = (pk) => {
 // Hook for user registration
 export const RegisterUser = async (body) => {
   try {
+    console.log("BODY")
+    console.log(body)
     const res = await axios.post(`${BASE_URL}/api/register/`, body);
     return res.data;
   } catch (error) {
-    toast.error(error.response.data.error);
-
+    toast.error(error?.response?.data?.error);
     console.error(error.response.data.error);
     return error;
   }
@@ -310,11 +311,13 @@ export const useResetPassword = () => {
 // Hook to log in the user
 export const Login = async (body) => {
   try {
+    console.log("BODY")
+    console.log(body)
     const res = await axios.post(`${BASE_URL}/api/login/`, body)
     localStorage.setItem('authToken', res.data.token)
     return res.data;
   } catch (error) {
-    toast.error(error.response.data.error);
+    toast.error(error?.response?.data?.error);
     console.error('Error loging user:', error);
     return error// Re-throw the error so the calling function can handle it
   }

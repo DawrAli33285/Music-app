@@ -1,7 +1,7 @@
 import React from 'react';
 import './index.css';
 
-const Filter = ({filterMusic,originalMusic,setOriginalMusic,music,setMusic,filter,setFilter}) => {
+const Filter = ({handleLanguageChange,languageFilter,setLanguageFilter,filterMusic,originalMusic,setOriginalMusic,music,setMusic,filter,setFilter}) => {
   return (
     <div className="filter">
       <h3 className="filter-title">Filter</h3>
@@ -45,7 +45,19 @@ const Filter = ({filterMusic,originalMusic,setOriginalMusic,music,setMusic,filte
           <h4>Language</h4>
           <span className="filter-toggle">+</span>
         </div>
-        {/* Add Language Filter Options Here */}
+        {['Hindi', 'Tamil', 'Malyalam'].map((language, index) => (
+  <div key={index} className="filter-option">
+    <input 
+      onChange={handleLanguageChange}
+      type="checkbox" 
+      id={language} 
+      checked={languageFilter === language}
+      value={language}
+      name={language} 
+    />
+    <label htmlFor={language}>{language}</label>
+  </div>
+))}
       </div>
     </div>
   );

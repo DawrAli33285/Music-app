@@ -14,6 +14,7 @@ import Checkout from "./Components/Homepage/Search_bycode/checkout";
 import "./App.css";
 import PaymentSuccess from "./Components/Homepage/Search_bycode/paymentsuccess";
 import PiracyComplaints from "./Components/Footer/PiracyComplaints";
+import Middleware from "./Components/Middleware/Middleware";
 
 function App() {
   const location = useLocation();
@@ -33,7 +34,9 @@ function App() {
     <div className="App">
       {location.pathname.startsWith("/dashboard") ? (
         <Routes>
-          <Route path="/dashboard/*" element={<AdminPanel />} />
+         <Route element={<Middleware></Middleware>}>
+         <Route path="/dashboard/*" element={<AdminPanel />} />
+          </Route>
         </Routes>
       ) : location.pathname === "/auth" ? (
         <Routes>
@@ -43,16 +46,18 @@ function App() {
         <>
           <Header />
           <Routes>
+            <Route path="/auth" element={<Auth />} />
+            <Route element={<Middleware/>}>
             <Route path="/" element={<Homepage />} />
             <Route path="/home" element={<Homepage />} />
             <Route path="/usercomponent" element={<UserComponent />} />
             <Route path="/usercomponent/:tab" element={<UserComponent />} />
             <Route path="/viewall" element={<ViewAll />} />
-            <Route path="/auth" element={<Auth />} />
             <Route path="/payment" element={<Payment />} />
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/serch_bycode" element={<SearchBycode />} />
             <Route path="/piracycomplaints" element={<PiracyComplaints />} />
+              </Route>
           </Routes>
           {footerPath && <Footer />}
         </>
