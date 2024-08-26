@@ -44,7 +44,11 @@ const [content,setContent]=useState([])
 
   const navigate = useNavigate();
   const handler = () => {
+   if(!localStorage.getItem('authToken')){
+    navigate('/auth')
+   }else{
     navigate("/viewall");
+   }
   };
   // const handleImageClick = (videoSrc) => {
     

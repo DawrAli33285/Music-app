@@ -3,6 +3,8 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import './Auth.css';
+import { gapi } from 'gapi-script';
+import { v4 as uuidv4 } from 'uuid';
 import { Link, useNavigate } from 'react-router-dom';
 import Gooogleimg from "../../../src/assets/Google.svg"
 import Main_logo from "../../../src/assets/new_logo.svg"
@@ -77,6 +79,62 @@ const Auth = () => {
   useEffect(() => {
 
   }, [isLogin, isUser])
+
+useEffect(()=>{
+
+  const initClient = () => {
+    gapi.client.init({
+        clientId: '87856424688-nhil5aauafjgorqfrnt432sf2gg66a4k.apps.googleusercontent.com',
+        scope: 'email profile openid',
+    });
+};
+gapi.load('client:auth2', initClient);
+},[])
+
+const authWithGoogle=async()=>{
+  try{
+
+    const authInstance = gapi.auth2.getAuthInstance();
+
+        const user = await authInstance.signIn();
+
+        
+        const profile = user.getBasicProfile();
+      if(isLogin){
+        let data={
+          email:profile?.cu,
+          password:uuidv4()
+      }
+      const result = await Login(data);
+      debugger
+      if(result?.response?.status !== 400){
+        // alert('Login successful!');
+        window.location.href = '/';
+      }
+
+      }else{
+        const body = {
+          first_name:profile?.Ad,
+          email: profile?.cu,
+          password:uuidv4(),
+       
+        };
+        body={
+          ...body,
+          password2:body.password
+        }
+        debugger
+        const result = await RegisterUser(body);
+        
+        if(result?.response?.status !== 400){
+          setIsLogin(true);
+        }
+      }
+        console.log(profile)
+  }catch(e){
+
+  }
+}
 
   return (
     <div className="auth-container">
@@ -155,7 +213,7 @@ const Auth = () => {
           </form>
 
 
-          <button className="google-signin"><img src={Gooogleimg} alt='' />Continue with Google</button>
+          <button onClick={authWithGoogle} className="google-signin"><img src={Gooogleimg} alt='' />Continue with Google</button>
           <div className="auth-divider">
             <span>Or</span>
           </div>

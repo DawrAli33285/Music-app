@@ -34,9 +34,9 @@ function App() {
     <div className="App">
       {location.pathname.startsWith("/dashboard") ? (
         <Routes>
-         <Route element={<Middleware></Middleware>}>
+        
          <Route path="/dashboard/*" element={<AdminPanel />} />
-          </Route>
+        
         </Routes>
       ) : location.pathname === "/auth" ? (
         <Routes>
@@ -47,9 +47,10 @@ function App() {
           <Header />
           <Routes>
             <Route path="/auth" element={<Auth />} />
-            <Route element={<Middleware/>}>
             <Route path="/" element={<Homepage />} />
             <Route path="/home" element={<Homepage />} />
+            <Route element={<Middleware/>}>
+
             <Route path="/usercomponent" element={<UserComponent />} />
             <Route path="/usercomponent/:tab" element={<UserComponent />} />
             <Route path="/viewall" element={<ViewAll />} />
