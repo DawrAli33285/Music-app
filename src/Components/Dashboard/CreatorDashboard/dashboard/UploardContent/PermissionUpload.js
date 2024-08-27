@@ -356,12 +356,7 @@ Case2Options.map((option)=>{
                 </button>
               
               </div>
-              <button
-                  type="button"
-                  onClick={nextstep}
-                >
-                 
-                </button>
+    
             </form>
           );
         

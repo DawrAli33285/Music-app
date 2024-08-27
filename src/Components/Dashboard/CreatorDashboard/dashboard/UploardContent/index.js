@@ -212,9 +212,18 @@ console.log(e.message)
                     )}
 <div className={currentStep !== 3 && 'musicSubmitbtn'}>
                         {currentStep < 5 && currentStep !== 3 && <button className='musicSubmitbutton' onClick={handleNext}>Submit</button>}
-                       {currentStep>4&&<button onClick={createContent}>
+                       {currentStep>4&&(
+                        <div style={{display:'flex',flexDirection:'column'}}>
+  <div className='note_SecWrapper desktop_only'><div className='note_sec'>
+                    <h1>Note</h1>
+                    <p>Since our customers buy a license for each song, we suggest you set an affordable price.</p>
+                </div>
+                </div>
+                        <button onClick={createContent}>
                           Submit Form
-                        </button>}
+                        </button>
+                        </div>
+                        )}
                         {/* You can include a Previous button if needed */}
                         {/* {currentStep > 1 && <button onClick={handlePrev}>Previous</button>} */}
                     </div>
@@ -223,11 +232,7 @@ console.log(e.message)
             
 
 
-                <div className='note_SecWrapper desktop_only'><div className='note_sec'>
-                    <h1>Note</h1>
-                    <p>Since our customers buy a license for each song, we suggest you set an affordable price.</p>
-                </div>
-                </div>
+              
             </div></>
     );
 };
